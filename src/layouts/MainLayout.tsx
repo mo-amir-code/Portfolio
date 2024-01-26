@@ -5,7 +5,9 @@ import SecondaryNav from "@/components/SecondaryNav"
 import MyContextProvider from "@/context/context"
 
 
-const MainLayout = ({ children }: { children: any }) => {
+const MainLayout = ({ children }: Readonly<{
+    children: React.ReactNode;
+  }>) => {
 
     return (
         <MyContextProvider>
