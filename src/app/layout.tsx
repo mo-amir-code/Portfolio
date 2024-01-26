@@ -19,9 +19,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} no-scrollbar max-w-7xl overflow-hidden flex flex-col w-full h-screen max-h-screen bg-black mx-auto`}>
+      <body className={`${inter.className} no-scrollbar max-w-7xl flex flex-col w-full h-full max-h-screen bg-black mx-auto`}>
           <Header />
-          <main className='h-[90.6vh] flex' >
+          <main className='h-[90vh] flex' >
             <MainLayout>
               {children}
             </MainLayout>
