@@ -13,7 +13,7 @@ const MainLayout = ({
 
     return (
         <MyContextProvider>
-            <div className="flex overflow-hidden" >
+            <div className="flex h-full overflow-hidden" >
                 <div className="w-12 bg-tertiary-color" >
                     <PrimaryNav />
                 </div>
