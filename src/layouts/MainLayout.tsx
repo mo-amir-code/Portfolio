@@ -9,7 +9,7 @@ const MainLayout = ({ children }: { children: any }) => {
 
     return (
         <MyContextProvider>
-            <div className="flex" >
+            <div className="flex overflow-hidden" >
                 <div className="w-12 bg-tertiary-color" >
                     <PrimaryNav />
                 </div>
