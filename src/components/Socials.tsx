@@ -8,7 +8,7 @@ const Socials = () => {
     const {theme} = useContext(MyContext);
 
   return (
-    <div className="font-[Montserrat] font-semibold leading-8 text-lg" >
+    <div className="font-[Montserrat] font-semibold leading-8 text-lg max-md:text-base max-sm:text-xs max-sm:leading-9" >
         <p><span className="mr-2" >1</span><span style={{color: theme.bg.primary}} >. socials</span> {"{"}</p>
         <p><span className="mr-8" >2</span>email: <span style={{color: theme.bg.primary}} ><a href="mailto:mo.amir.code@gmail.com" target="_blank" className="hover:underline cursor-pointer"  >mo.amir.code@gmail.com</a></span></p>      
         <p><span className="mr-8" >3</span>github: <span style={{color: theme.bg.primary}} ><a href="https://github.com/mo-amir-code" target="_blank" className="hover:underline" >mo-amir-code</a></span></p>      
