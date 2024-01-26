@@ -9,7 +9,7 @@ import bell_icon from "@/assets/app/bell.png"
 
 const Footer = () => {
     return (
-        <header className="w-full flex items-center border-t border-black justify-between px-3 text-white text-xs bg-secondary-color" >
+        <header className="w-full z-10 flex items-center border-t border-black justify-between px-3 text-white text-xs bg-secondary-color" >
             <div className="flex items-center justify-start flex-1" >
 
                 <div className="flex items-center justify-center gap-2 hover:bg-gray-500 p-1 cursor-pointer" >
