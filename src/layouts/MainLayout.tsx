@@ -5,13 +5,11 @@ import SecondaryNav from "@/components/SecondaryNav"
 import MyContextProvider from "@/context/context"
 
 
-const MainLayout = ({ children }: Readonly<{
-    children: React.ReactNode;
-  }>) => {
+const MainLayout = ({ children }: { children: any }) => {
 
     return (
         <MyContextProvider>
-            <div className="flex overflow-hidden" >
+            <div className="flex" >
                 <div className="w-12 bg-tertiary-color" >
                     <PrimaryNav />
                 </div>
