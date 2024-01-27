@@ -18,8 +18,11 @@ const ProjectCard = ({
   source,
   url,
 }: ProjectCardType) => {
+
+  console.log("sdsdsd",ig)
+
   return (
-    <div className="flex-1 min-w-[250px] rounded-lg overflow-hidden hover:shadow-lg duration-150 transition-all cursor-pointer bg-secondary-color">
+    <div className="flex-1 min-w-[250px] max-w-[300px] rounded-lg overflow-hidden hover:shadow-lg duration-150 transition-all cursor-pointer bg-secondary-color">
       <div className="w-full">
         <Image src={ig} alt={title} />
       </div>
