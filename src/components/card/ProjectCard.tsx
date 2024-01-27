@@ -1,5 +1,5 @@
 import Flag from "./Flag";
-import CardButton from "./CardButton";
+import CardButton from "../buttons/CardButton";
 import ProjectImage from "./ProjectImage";
 
 export interface ProjectCardType {

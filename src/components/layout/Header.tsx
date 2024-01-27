@@ -1,5 +1,5 @@
 import Image from "next/image"
-import vscode_icon from "../assets/app/vs code.svg"
+import vscode_icon from "@/assets/app/vs code.svg"
 
 
 const Header = () => {

@@ -1,7 +1,7 @@
 "use client"
-import Navbar from "@/components/Navbar"
-import PrimaryNav from "@/components/PrimaryNav"
-import SecondaryNav from "@/components/SecondaryNav"
+import Navbar from "@/components/layout/Navbar"
+import PrimaryNav from "@/components/layout/PrimaryNav"
+import SecondaryNav from "@/components/layout/SecondaryNav"
 import MyContextProvider from "@/context/context"
 
 

@@ -1,6 +1,6 @@
 "use client"
 import { useForm } from "react-hook-form"
-import Button from "./Button"
+import Button from "../buttons/Button"
 import InputField from "./InputField"
 
 interface ContactFormType {

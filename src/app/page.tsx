@@ -1,7 +1,7 @@
-import AutoTypeWriter from "@/components/AutoTypeWriter";
+import AutoTypeWriter from "@/components/home/AutoTypeWriter";
 import Bio from "@/components/Bio";
-import LinkBorderButton from "@/components/LinkBorderButton";
-import LinkSolidButton from "@/components/LinkSolidButton";
+import LinkBorderButton from "@/components/buttons/LinkBorderButton";
+import LinkSolidButton from "@/components/buttons/LinkSolidButton";
 
 
 const page = () => {

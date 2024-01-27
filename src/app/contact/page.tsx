@@ -1,5 +1,5 @@
-import ContactLeftSide from "@/components/ContactLeftSide";
-import ContactRightSide from "@/components/ContactRightSide";
+import ContactLeftSide from "@/components/contact/ContactLeftSide";
+import ContactRightSide from "@/components/contact/ContactRightSide";
 
 
 const Contact = () => {
