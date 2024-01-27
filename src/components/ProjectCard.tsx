@@ -1,9 +1,9 @@
-import Image from "next/image";
 import Flag from "./Flag";
-import ig from "@/assets/projects/instagram-poster.png";
 import CardButton from "./CardButton";
+import ProjectImage from "./ProjectImage";
 
 export interface ProjectCardType {
+  id: string;
   title: string;
   description: string;
   flags: [string];
@@ -12,6 +12,7 @@ export interface ProjectCardType {
 }
 
 const ProjectCard = ({
+  id,
   title,
   description,
   flags,
@@ -19,13 +20,9 @@ const ProjectCard = ({
   url,
 }: ProjectCardType) => {
 
-  console.log("sdsdsd",ig)
-
   return (
     <div className="flex-1 min-w-[250px] max-w-[300px] rounded-lg overflow-hidden hover:shadow-lg duration-150 transition-all cursor-pointer bg-secondary-color">
-      <div className="w-full">
-        <Image src={ig} alt={title} />
-      </div>
+      <ProjectImage id={id} title={title} />
       <div className="px-5 py-6 space-y-2">
         <h2 className="text-lg font-medium">{title}</h2>
         <p className="">{description}</p>

@@ -27,6 +27,27 @@ export const navData = [
 
 export const ProjectsData = [
   {
+    id: "creto",
+    title: "Creto",
+    description:
+      "Cycle shop: filters, wishlist, order tracking, Stripe payments, and Firebase authentication for secure shopping.",
+    flags: [
+        "react",
+        "redux",
+        "node",
+        "tailwind",
+        "express",
+        "API",
+        "JWT",
+        "mongodb",
+        "stripe",
+        "firebase",
+    ],
+    source: "https://github.com/mo-amir-code/Creto-Frontend",
+    url: "https://creto-frontend-black.vercel.app/"
+  },
+  {
+    id: "instagram",
     title: "Instagram",
     description:
       "Instagram clone which is a social media platform with lots of features like original Instagram",
@@ -47,43 +68,35 @@ export const ProjectsData = [
     url: "https://instagram-frontend-moamir.netlify.app/"
   },
   {
-    title: "Instagram",
+    id: "newflix",
+    title: "Newflix",
     description:
-      "Instagram clone which is a social media platform with lots of features like original Instagram",
+      "Netflix clone: Discover, sign in/out, explore movies, and series with seamless user experience.",
     flags: [
-        "react",
-        "redux",
-        "node",
+        "next",
         "tailwind",
-        "express",
         "API",
-        "cloudinary",
-        "JWT",
-        "infinite scroll",
-        "mongodb",
-        "socket.io",
+        "firebase",
+        "tmdb",
     ],
-    source: "https://github.com/mo-amir-code/Instagram-Frontend",
-    url: "https://instagram-frontend-moamir.netlify.app/"
+    source: "https://github.com/mo-amir-code/newflix",
+    url: "https://newflix-six.vercel.app/"
   },
   {
-    title: "Instagram",
+    id: "mern",
+    title: "E-Commerce Platform",
     description:
-      "Instagram clone which is a social media platform with lots of features like original Instagram",
+      "Shop, cart, orders, Stripe payments, user authentication—seamless online store experience with signin/signout capabilities.",
     flags: [
         "react",
         "redux",
-        "node",
-        "tailwind",
-        "express",
         "API",
-        "cloudinary",
+        "tailwind",
+        "passport",
         "JWT",
-        "infinite scroll",
-        "mongodb",
-        "socket.io",
+        "middleware",
     ],
-    source: "https://github.com/mo-amir-code/Instagram-Frontend",
-    url: "https://instagram-frontend-moamir.netlify.app/"
+    source: "https://github.com/mo-amir-code/MERN_E-commerce",
+    url: "https://mern-e-commerce-tau.vercel.app/"
   },
 ];
