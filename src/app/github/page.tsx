@@ -2,6 +2,7 @@
 import Hero from "@/components/github/Hero";
 import { useEffect, useState } from "react";
 import GiftCard from "@/components/github/GitCard";
+import Loader from "@/components/Loader";
 
 interface GithubProfileType {
   avatar_url: string;
@@ -36,7 +37,7 @@ const Github = () => {
   }, []);
 
   return (
-    <div className="px-4 py-16 text-gray-100 space-y-4">
+    <div className="h-full w-full px-4 py-16 text-gray-100 space-y-4">
       {profileData && (
         <Hero
           avatarUrl={profileData.avatar_url}
@@ -45,9 +46,9 @@ const Github = () => {
           followers={profileData.followers}
         />
       )}
-      <div className="w-full flex justify-between flex-wrap gap-3">
-        {!!repos &&
-          repos.map((repo, idx) => (
+      {repos ? (
+        <div className="w-full flex justify-between flex-wrap gap-3">
+          {repos.map((repo, idx) => (
             <GiftCard
               key={idx}
               name={repo.name}
@@ -58,7 +59,12 @@ const Github = () => {
               deployedLink={repo.homepage}
             />
           ))}
-      </div>
+        </div>
+      ) : (
+        <div className="w-full h-full flex items-center justify-center">
+          <Loader />
+        </div>
+      )}
     </div>
   );
 };

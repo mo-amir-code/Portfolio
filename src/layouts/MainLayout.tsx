@@ -24,7 +24,7 @@ const MainLayout = ({
                     <div className="absolute top-0 left-0 w-full bg-secondary-color no-scrollbar overflow-x-auto" >
                         <Navbar />
                     </div>
-                    <div className="w-full" >
+                    <div className="w-full h-full" >
                         {children}
                     </div>
                 </div>
