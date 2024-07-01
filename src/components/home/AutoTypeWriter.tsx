@@ -10,7 +10,7 @@ const AutoTypeWriter = () => {
     <span style={{ color: theme.bg.primary, fontWeight: 'bold' }}>
           {/* Style will be inherited from the parent element */}
           <Typewriter
-            words={['Full Stack Web Developer', 'Discord Bot Developer', 'Freelancer']}
+            words={['Full Stack Web Developer', 'Blockchain DApp Developer', 'Learner']}
             loop={true}
             cursor
             cursorStyle='|'

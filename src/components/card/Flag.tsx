@@ -1,25 +1,11 @@
 "use client"
 
+import { FLAG_COLORS } from "@/utils/constants"
+
 const Flag = ({content}:{content:string}) => {
     const color = () => {
-        switch(content){
-            case "react":
-                return "#5ED5F6";
-            case "redux":
-                return "#7248B6";
-            case "tailwind":
-                return "#1DC0CD";
-            case "node":
-                return "#479341";
-            case "cloudinary":
-                return "#0875D0";
-            case "mongodb":
-                return "#47A340";
-            case "firebase":
-                return "#FFCE36";
-            default:
-                return "#fff";
-        }
+        const rn = Math.floor(Math.random() * FLAG_COLORS.length);
+        return FLAG_COLORS[rn];
     }
     
   return (
