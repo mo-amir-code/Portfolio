@@ -71,7 +71,7 @@ const SignIn = () => {
           register={register("secretCode", { required: "Secret code is required" })}
           error={errors.secretCode?.message || undefined}
         />
-        <Link href={"/admin/auth/signup"} className="px-1 text-sm font-medium py-2" >Don't have an account? Click here</Link>
+        <Link href={"/admin/auth/signup"} className="px-1 text-sm font-medium py-2" >{"Don' t"} have an account? Click here</Link>
         <Button name="Login" />
       </form>
     </div>
