@@ -12,17 +12,20 @@ body {
 
 @layer utilities {
   /* Hide scrollbar for Chrome, Safari and Opera */
-  .no-scrollbar::-webkit-scrollbar {
-    display: none;
-  }
-  /* Hide scrollbar for IE, Edge and Firefox */
-  .no-scrollbar {
-    -ms-overflow-style: none; /* IE and Edge */
-    scrollbar-width: none; /* Firefox */
-  }
   .smooth_transition {
     @apply transition-all duration-200 ease-in-out;
   }
+}
+*::-webkit-scrollbar {
+  display: none;
+}
+
+/* Additional styles for all elements */
+* {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+
+  /* Add any other universal styles here */
 }
 
 /* Loader */

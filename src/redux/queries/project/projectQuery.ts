@@ -1,15 +1,15 @@
-import { SignInFormType, SignUpFormType } from "@/components/auth/types";
+import { ProjectFormType } from "@/components/admin/types";
 import { APIRequestType } from "@/redux/reduxTypes";
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
 
-const authAPI = createApi({
-    reducerPath: "authAPI",
-    baseQuery: fetchBaseQuery({baseUrl: "/api/auth"}),
+const projectAPI = createApi({
+    reducerPath: "projectAPI",
+    baseQuery: fetchBaseQuery({baseUrl: "/api"}),
     endpoints: (builder) => ({
-        signIn: builder.mutation<APIRequestType, SignInFormType>({
+        addProject: builder.mutation<APIRequestType, ProjectFormType>({
             query: (data) => ({
-                url: 'signin',
+                url: 'project',
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -18,20 +18,19 @@ const authAPI = createApi({
                 credentials: "include"
             })
         }),
-        signUp: builder.mutation<APIRequestType, SignUpFormType>({
-            query: (data) => ({
-                url: 'signup',
-                method: "POST",
+        getProjects: builder.query<APIRequestType, undefined>({
+            query: () => ({
+                url: 'project',
+                method: "GET",
                 headers: {
                     "Content-Type": "application/json",
                 },
-                body: data,
                 credentials: "include"
             })
-        }),
+        })
     })
 });
 
-export const { useSignInMutation, useSignUpMutation  } = authAPI;
+export const { useAddProjectMutation, useGetProjectsQuery  } = projectAPI;
 
-export default authAPI;
+export default projectAPI;

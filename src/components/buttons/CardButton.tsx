@@ -11,7 +11,7 @@ const CardButton = ({ content, path }: { content: string; path: string }) => {
         style={{ backgroundColor: theme.bg.primary }}
         className="w-full z-0 absolute bottom-0 left-0 h-[2px] duration-200 transition-all group-hover:h-full"
       />
-      <span className="z-10 absolute top-0 left-0 w-full h-full flex items-center justify-center">{content}</span>
+      <span className="absolute top-0 left-0 w-full h-full flex items-center justify-center">{content}</span>
     </a>
   );
 };

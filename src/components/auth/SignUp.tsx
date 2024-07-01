@@ -6,8 +6,17 @@ import TextInputField from "./inputFields/TextInputField";
 import Button from "./button/Button";
 import toast from "react-hot-toast";
 import Link from "next/link";
+import { useSignUpMutation } from "@/redux/queries/auth/authQuery";
+import { useRouter } from "next/navigation";
+import { useAppDispatch } from "@/redux/hooks";
+import { APIRequestType } from "@/redux/reduxTypes";
+import { loginUser } from "@/redux/slices/auth/authSlice";
 
 const SignUp = () => {
+  const [signup] = useSignUpMutation();
+  const navigate = useRouter();
+  const dispatch = useAppDispatch();
+
   const {
     handleSubmit,
     register,
@@ -15,10 +24,23 @@ const SignUp = () => {
     reset,
   } = useForm<SignUpFormType>();
 
-  const handleOnSubmit = (data:SignUpFormType) => {
+  const handleOnSubmit = async (data:SignUpFormType) => {
     try {
 
-      
+      console.log("erer")
+
+      const { data:resData, error } = await signup(data) as { data:APIRequestType, error?:{data:APIRequestType} }
+
+      if(resData?.success){
+        toast.success(resData.message);
+        navigate.push("/admin/auth/signin");
+        dispatch(loginUser());
+        reset();
+      }
+
+      if(error?.data?.success === false){
+        toast.error(error?.data?.message);
+      }
 
     } catch (error) {
       console.error(error);

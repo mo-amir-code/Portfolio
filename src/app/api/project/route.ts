@@ -25,8 +25,6 @@ export async function GET(req: NextRequest, res: NextResponse) {
 
 export async function POST(req: NextRequest, res: NextResponse) {
   try {
-    await isDBConnected();
-
     const data = (await req.json()) as NewProjectType;
     const { title, description, image, tags, secretCode} = data;
 
@@ -43,6 +41,8 @@ export async function POST(req: NextRequest, res: NextResponse) {
         { status: 400 }
       );
     }
+
+    await isDBConnected();
 
     await Project.create(data);
 
@@ -61,7 +61,6 @@ export async function POST(req: NextRequest, res: NextResponse) {
 
 export async function PATCH(req: NextRequest, res: NextResponse) {
   try {
-    await isDBConnected();
 
     const data = (await req.json()) as UpdateProjectType;
     const { projectId, secretCode} = data;
@@ -80,6 +79,8 @@ export async function PATCH(req: NextRequest, res: NextResponse) {
       );
     }
 
+    await isDBConnected();
+
     await Project.findByIdAndUpdate(projectId, data);
 
     return NextResponse.json(
@@ -97,8 +98,7 @@ export async function PATCH(req: NextRequest, res: NextResponse) {
 
 export async function DELETE(req: NextRequest, res: NextResponse) {
   try {
-    await isDBConnected();
-
+    
     const { projectId, secretCode} = (await req.json()) as DeleteProjectType;
 
     if(!projectId || !secretCode){
@@ -114,6 +114,8 @@ export async function DELETE(req: NextRequest, res: NextResponse) {
         { status: 400 }
       );
     }
+
+    await isDBConnected();
 
     await Project.findByIdAndDelete(projectId);
 

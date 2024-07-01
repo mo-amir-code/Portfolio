@@ -20,11 +20,11 @@ const MainLayout = ({
                 <div className="h-full bg-secondary-color max-sm:hidden" >
                     <SecondaryNav />
                 </div>
-                <div className="relative w-full h-full overflow-y-auto no-scrollbar bg-tertiary-color">
-                    <div className="absolute top-0 left-0 w-full bg-secondary-color no-scrollbar overflow-x-auto" >
+                <div className="relative w-full overflow-y-auto no-scrollbar bg-tertiary-color">
+                    <div className="absolute top-0 left-0 w-full  bg-secondary-color no-scrollbar overflow-x-auto" >
                         <Navbar />
                     </div>
-                    <div className="w-full h-full" >
+                    <div className="w-full h-full no-scrollbar" >
                         {children}
                     </div>
                 </div>

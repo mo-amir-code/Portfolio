@@ -1,4 +1,5 @@
 "use client"
+import ProjectForm from '@/components/admin/ProjectForm'
 import { useAppSelector } from '@/redux/hooks'
 import { selectIsAdminLoggedIn } from '@/redux/slices/auth/authSlice'
 import { useRouter } from 'next/navigation'
@@ -14,8 +15,8 @@ const Admin = () => {
   }
 
   return (
-    <div className='' >
-      
+    <div className='w-full' >
+      <ProjectForm />
     </div>
   )
 }
