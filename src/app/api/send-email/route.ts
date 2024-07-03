@@ -38,13 +38,13 @@ export async function POST(req: NextRequest, res: NextResponse) {
 
     await transporter.sendMail(mailOptions);
     return NextResponse.json(
-      { message: "Email sent successfully" },
+      { success: true, message: "Email has been sent" },
       { status: 200 }
     );
   } catch (error) {
     console.log(error);
     return NextResponse.json(
-      { message: "Some Internal Error Occured!" },
+      { success: false, message: "Some Internal Error Occured!" },
       { status: 500 }
     );
   }

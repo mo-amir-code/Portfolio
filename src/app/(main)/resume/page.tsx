@@ -1,9 +1,9 @@
-
+import ViewResume from "@/components/resume";
 
 const Resume = () => {
   return (
-    <div>
-      Resume
+    <div className="w-full h-full" >
+      <ViewResume />
     </div>
   )
 }

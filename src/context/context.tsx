@@ -49,7 +49,7 @@ const MyContextProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
             border: "#000000"
         }
     });
-    const [isFileOpen, setIsFileOpen] = useState(false);
+    const [isFileOpen, setIsFileOpen] = useState(true);
 
 
     return (
