@@ -17,7 +17,7 @@ const Navbar = () => {
     const { theme } = useContext(MyContext);
 
     return (
-        <div className="flex w-[1036px] items-center justify-start bg-secondary-color" >
+        <div className="flex w-[1036px] items-center justify-start bg-secondary-color overflow-x-auto" >
             {
                 navData.map((nav, idx) => (
                     <Link href={nav.path} key={idx} className={`relative rounded-t overflow-hidden flex items-center border-r-2 border-tertiary-color gap-2 py-3 cursor-pointer px-5 bg-secondary-color text-white`} >
