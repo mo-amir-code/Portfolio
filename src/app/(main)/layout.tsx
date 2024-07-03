@@ -18,7 +18,7 @@ export default function RootLayout({
   return (
     <>
       <Header />
-      <main className="flex-grow h-full w-full">
+      <main className="flex-grow w-full">
         <MainLayout>{children}</MainLayout>
       </main>
       <Footer />
