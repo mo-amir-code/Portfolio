@@ -3,6 +3,7 @@ import "../globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import MainLayout from "@/layouts/MainLayout";
+import MyContextProvider from "@/context/context";
 
 export const metadata: Metadata = {
   title: "Mo Amir - Full Stack Web Developer",
@@ -17,11 +18,13 @@ export default function RootLayout({
 }>) {
   return (
     <>
-      <Header />
-      <main className="flex-grow w-full">
-        <MainLayout>{children}</MainLayout>
-      </main>
-      <Footer />
+      <MyContextProvider>
+        <Header />
+        <main className="flex-grow w-full">
+          <MainLayout>{children}</MainLayout>
+        </main>
+        <Footer />
+      </MyContextProvider>
     </>
   );
 }
