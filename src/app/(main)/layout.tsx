@@ -4,6 +4,7 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import MainLayout from "@/layouts/MainLayout";
 import MyContextProvider from "@/context/context";
+import FramerProvider from "@/providers/FramerProvider";
 
 export const metadata: Metadata = {
   title: "Mo Amir - Full Stack Web Developer",
@@ -21,7 +22,9 @@ export default function RootLayout({
       <MyContextProvider>
         <Header />
         <main className="flex-grow w-full">
-          <MainLayout>{children}</MainLayout>
+          <MainLayout>
+            <FramerProvider>{children}</FramerProvider>
+          </MainLayout>
         </main>
         <Footer />
       </MyContextProvider>
